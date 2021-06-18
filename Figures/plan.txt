@@ -1,0 +1,10 @@
+1. Overall housing price & growth before and during the covid
+2. MC simulations of predicted housing price versus actual
+3. Scatter plots of mortgage rate and housing price
+4. Lumber costs
+5. Housing supply
+
+Please name the figures properly when uploading them.
+
+
+
