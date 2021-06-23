@@ -1,0 +1,40 @@
+Begin with speaking on how my first step was to research using the Zillow API
+	
+	- The Zillow API was found to only be for commercial use
+	- Zillow provided me with a link that provided me with many datasets, I chose to use the ones on Median Home Prices
+
+	- Data Set Up / Cleaning steps
+
+
+	1. Data was organized by Metro Area / Monthly from APR-1996 through APR 2021
+	
+		* First: Define 4 Regions Northeast / Midwest / South / West
+		* Second: Group by the 4 Regions
+		* Third: Transpose the Data to show Regions in the Columns and the Dates in the Rows
+		* Fourth: Slice my dataset by dates:
+			1. 2015-FEB 2020; Prediction Dataset
+			2. FEB 2020 - APR -2021: Actuals Dataset
+
+	2. My Model was based on a MCSim following a Normal Distribution
+
+		* Running 100 Simulations for 14 Instances (Equaling number of months in Actuals Dataset)
+		* Used scypy.stats / norm to normalize my data for the prediction as well as providing 95% CI's 
+		* Two Functions were created and ran: 
+			1. To run simulation on Prediction Data Set and Plot Simulations
+			2. To Plot Actuals Data and define difference between Simulation and Actuals
+	3. Results: 
+
+		* Hypothesis was that the Midwest showed the higher growth / difference in predicted
+		* Order:
+			1. Midwest 2. South 3. West 4. Northwest
+
+		* Based on this Model - which was based on only one variable (Median Housing Market) we see that Northeast Housing Prices 
+		  were shown to be 3 times higher against the projected price than the Midwest
+.
+
+	4. Conclusion: 
+	
+		* For future analysis: Since I only used the one variable in my predictive analysis, I would like to include the variables that were discussed earlier
+				       since they are definitely real-world applicable - and test and train my model on that, so that we could have a more robust and
+				       conclusive prediction
+
